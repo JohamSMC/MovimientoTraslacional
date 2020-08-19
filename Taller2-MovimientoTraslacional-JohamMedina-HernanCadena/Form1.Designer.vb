@@ -22,10 +22,391 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TB_m1 = New System.Windows.Forms.TextBox()
+        Me.TB_m2 = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.TB_k2 = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.TB_k1 = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.TB_k3 = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.TB_b3 = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.TB_b2 = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.TB_b1 = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.TB_b4 = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.B_start = New System.Windows.Forms.Button()
+        Me.PB_limIZ = New System.Windows.Forms.PictureBox()
+        Me.PB_limDE = New System.Windows.Forms.PictureBox()
+        Me.PB_m1 = New System.Windows.Forms.PictureBox()
+        Me.PB_b1 = New System.Windows.Forms.PictureBox()
+        Me.PB_b2 = New System.Windows.Forms.PictureBox()
+        Me.PB_k3 = New System.Windows.Forms.PictureBox()
+        Me.PB_b3 = New System.Windows.Forms.PictureBox()
+        Me.PB_b4 = New System.Windows.Forms.PictureBox()
+        Me.PB_k1 = New System.Windows.Forms.PictureBox()
+        Me.PB_k2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
+        CType(Me.PB_limIZ, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PB_limDE, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PB_m1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PB_b1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PB_b2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PB_k3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PB_b3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PB_b4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PB_k1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PB_k2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(22, 20)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(67, 20)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Masa 1"
+        '
+        'TB_m1
+        '
+        Me.TB_m1.Location = New System.Drawing.Point(98, 19)
+        Me.TB_m1.Name = "TB_m1"
+        Me.TB_m1.Size = New System.Drawing.Size(85, 26)
+        Me.TB_m1.TabIndex = 1
+        Me.TB_m1.Text = "10"
+        '
+        'TB_m2
+        '
+        Me.TB_m2.Location = New System.Drawing.Point(98, 66)
+        Me.TB_m2.Name = "TB_m2"
+        Me.TB_m2.Size = New System.Drawing.Size(85, 26)
+        Me.TB_m2.TabIndex = 3
+        Me.TB_m2.Text = "10"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(22, 67)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(67, 20)
+        Me.Label2.TabIndex = 2
+        Me.Label2.Text = "Masa 2"
+        '
+        'TB_k2
+        '
+        Me.TB_k2.Location = New System.Drawing.Point(268, 67)
+        Me.TB_k2.Name = "TB_k2"
+        Me.TB_k2.Size = New System.Drawing.Size(85, 26)
+        Me.TB_k2.TabIndex = 7
+        Me.TB_k2.Text = "1"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(213, 68)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(28, 20)
+        Me.Label3.TabIndex = 6
+        Me.Label3.Text = "k2"
+        '
+        'TB_k1
+        '
+        Me.TB_k1.Location = New System.Drawing.Point(268, 20)
+        Me.TB_k1.Name = "TB_k1"
+        Me.TB_k1.Size = New System.Drawing.Size(85, 26)
+        Me.TB_k1.TabIndex = 5
+        Me.TB_k1.Text = "1"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(213, 21)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(28, 20)
+        Me.Label4.TabIndex = 4
+        Me.Label4.Text = "k1"
+        '
+        'TB_k3
+        '
+        Me.TB_k3.Location = New System.Drawing.Point(268, 113)
+        Me.TB_k3.Name = "TB_k3"
+        Me.TB_k3.Size = New System.Drawing.Size(85, 26)
+        Me.TB_k3.TabIndex = 9
+        Me.TB_k3.Text = "1"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(213, 114)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(28, 20)
+        Me.Label5.TabIndex = 8
+        Me.Label5.Text = "k3"
+        '
+        'TB_b3
+        '
+        Me.TB_b3.Location = New System.Drawing.Point(453, 112)
+        Me.TB_b3.Name = "TB_b3"
+        Me.TB_b3.Size = New System.Drawing.Size(85, 26)
+        Me.TB_b3.TabIndex = 15
+        Me.TB_b3.Text = "1"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(402, 115)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(29, 20)
+        Me.Label6.TabIndex = 14
+        Me.Label6.Text = "b3"
+        '
+        'TB_b2
+        '
+        Me.TB_b2.Location = New System.Drawing.Point(453, 66)
+        Me.TB_b2.Name = "TB_b2"
+        Me.TB_b2.Size = New System.Drawing.Size(85, 26)
+        Me.TB_b2.TabIndex = 13
+        Me.TB_b2.Text = "1"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(402, 69)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(29, 20)
+        Me.Label7.TabIndex = 12
+        Me.Label7.Text = "b2"
+        '
+        'TB_b1
+        '
+        Me.TB_b1.Location = New System.Drawing.Point(453, 19)
+        Me.TB_b1.Name = "TB_b1"
+        Me.TB_b1.Size = New System.Drawing.Size(85, 26)
+        Me.TB_b1.TabIndex = 11
+        Me.TB_b1.Text = "1"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(402, 22)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(29, 20)
+        Me.Label8.TabIndex = 10
+        Me.Label8.Text = "b1"
+        '
+        'TB_b4
+        '
+        Me.TB_b4.Location = New System.Drawing.Point(453, 156)
+        Me.TB_b4.Name = "TB_b4"
+        Me.TB_b4.Size = New System.Drawing.Size(85, 26)
+        Me.TB_b4.TabIndex = 17
+        Me.TB_b4.Text = "1"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(402, 159)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(29, 20)
+        Me.Label9.TabIndex = 16
+        Me.Label9.Text = "b4"
+        '
+        'B_start
+        '
+        Me.B_start.Location = New System.Drawing.Point(744, 19)
+        Me.B_start.Name = "B_start"
+        Me.B_start.Size = New System.Drawing.Size(151, 37)
+        Me.B_start.TabIndex = 18
+        Me.B_start.Text = "Procesar"
+        Me.B_start.UseVisualStyleBackColor = True
+        '
+        'PB_limIZ
+        '
+        Me.PB_limIZ.Location = New System.Drawing.Point(26, 293)
+        Me.PB_limIZ.Name = "PB_limIZ"
+        Me.PB_limIZ.Size = New System.Drawing.Size(25, 256)
+        Me.PB_limIZ.TabIndex = 19
+        Me.PB_limIZ.TabStop = False
+        '
+        'PB_limDE
+        '
+        Me.PB_limDE.Location = New System.Drawing.Point(947, 293)
+        Me.PB_limDE.Name = "PB_limDE"
+        Me.PB_limDE.Size = New System.Drawing.Size(25, 256)
+        Me.PB_limDE.TabIndex = 20
+        Me.PB_limDE.TabStop = False
+        '
+        'PB_m1
+        '
+        Me.PB_m1.Location = New System.Drawing.Point(298, 354)
+        Me.PB_m1.Name = "PB_m1"
+        Me.PB_m1.Size = New System.Drawing.Size(150, 150)
+        Me.PB_m1.TabIndex = 21
+        Me.PB_m1.TabStop = False
+        '
+        'PB_b1
+        '
+        Me.PB_b1.Location = New System.Drawing.Point(41, 397)
+        Me.PB_b1.Name = "PB_b1"
+        Me.PB_b1.Size = New System.Drawing.Size(288, 18)
+        Me.PB_b1.TabIndex = 23
+        Me.PB_b1.TabStop = False
+        '
+        'PB_b2
+        '
+        Me.PB_b2.Location = New System.Drawing.Point(41, 445)
+        Me.PB_b2.Name = "PB_b2"
+        Me.PB_b2.Size = New System.Drawing.Size(288, 18)
+        Me.PB_b2.TabIndex = 24
+        Me.PB_b2.TabStop = False
+        '
+        'PB_k3
+        '
+        Me.PB_k3.Location = New System.Drawing.Point(697, 397)
+        Me.PB_k3.Name = "PB_k3"
+        Me.PB_k3.Size = New System.Drawing.Size(263, 18)
+        Me.PB_k3.TabIndex = 23
+        Me.PB_k3.TabStop = False
+        '
+        'PB_b3
+        '
+        Me.PB_b3.Location = New System.Drawing.Point(428, 420)
+        Me.PB_b3.Name = "PB_b3"
+        Me.PB_b3.Size = New System.Drawing.Size(174, 18)
+        Me.PB_b3.TabIndex = 23
+        Me.PB_b3.TabStop = False
+        '
+        'PB_b4
+        '
+        Me.PB_b4.Location = New System.Drawing.Point(697, 445)
+        Me.PB_b4.Name = "PB_b4"
+        Me.PB_b4.Size = New System.Drawing.Size(263, 18)
+        Me.PB_b4.TabIndex = 23
+        Me.PB_b4.TabStop = False
+        '
+        'PB_k1
+        '
+        Me.PB_k1.Location = New System.Drawing.Point(428, 369)
+        Me.PB_k1.Name = "PB_k1"
+        Me.PB_k1.Size = New System.Drawing.Size(174, 18)
+        Me.PB_k1.TabIndex = 23
+        Me.PB_k1.TabStop = False
+        '
+        'PB_k2
+        '
+        Me.PB_k2.Location = New System.Drawing.Point(428, 473)
+        Me.PB_k2.Name = "PB_k2"
+        Me.PB_k2.Size = New System.Drawing.Size(174, 18)
+        Me.PB_k2.TabIndex = 23
+        Me.PB_k2.TabStop = False
+        '
+        'PictureBox8
+        '
+        Me.PictureBox8.Location = New System.Drawing.Point(581, 354)
+        Me.PictureBox8.Name = "PictureBox8"
+        Me.PictureBox8.Size = New System.Drawing.Size(150, 150)
+        Me.PictureBox8.TabIndex = 25
+        Me.PictureBox8.TabStop = False
+        '
+        'Form1
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(984, 561)
+        Me.Controls.Add(Me.PB_b2)
+        Me.Controls.Add(Me.PB_b4)
+        Me.Controls.Add(Me.PB_k1)
+        Me.Controls.Add(Me.PB_k2)
+        Me.Controls.Add(Me.PB_b3)
+        Me.Controls.Add(Me.PB_k3)
+        Me.Controls.Add(Me.PB_b1)
+        Me.Controls.Add(Me.PB_limDE)
+        Me.Controls.Add(Me.PB_limIZ)
+        Me.Controls.Add(Me.B_start)
+        Me.Controls.Add(Me.TB_b4)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.TB_b3)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.TB_b2)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.TB_b1)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.TB_k3)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.TB_k2)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.TB_k1)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.TB_m2)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.TB_m1)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.PictureBox8)
+        Me.Controls.Add(Me.PB_m1)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.Name = "Form1"
         Me.Text = "Form1"
+        CType(Me.PB_limIZ, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PB_limDE, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PB_m1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PB_b1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PB_b2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PB_k3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PB_b3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PB_b4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PB_k1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PB_k2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
     End Sub
 
+    Friend WithEvents Label1 As Label
+    Friend WithEvents TB_m1 As TextBox
+    Friend WithEvents TB_m2 As TextBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents TB_k2 As TextBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents TB_k1 As TextBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents TB_k3 As TextBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents TB_b3 As TextBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents TB_b2 As TextBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents TB_b1 As TextBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents TB_b4 As TextBox
+    Friend WithEvents Label9 As Label
+    Friend WithEvents B_start As Button
+    Friend WithEvents PB_limIZ As PictureBox
+    Friend WithEvents PB_limDE As PictureBox
+    Friend WithEvents PB_m1 As PictureBox
+    Friend WithEvents PB_b1 As PictureBox
+    Friend WithEvents PB_b2 As PictureBox
+    Friend WithEvents PB_k3 As PictureBox
+    Friend WithEvents PB_b3 As PictureBox
+    Friend WithEvents PB_b4 As PictureBox
+    Friend WithEvents PB_k1 As PictureBox
+    Friend WithEvents PB_k2 As PictureBox
+    Friend WithEvents PictureBox8 As PictureBox
 End Class
