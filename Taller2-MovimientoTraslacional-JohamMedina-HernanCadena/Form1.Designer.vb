@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TB_m1 = New System.Windows.Forms.TextBox()
         Me.TB_m2 = New System.Windows.Forms.TextBox()
@@ -52,6 +53,12 @@ Partial Class Form1
         Me.PB_k1 = New System.Windows.Forms.PictureBox()
         Me.PB_k2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.TB_Cantidad = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.TB_Ganancia = New System.Windows.Forms.TextBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         CType(Me.PB_limIZ, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PB_limDE, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PB_m1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -63,6 +70,8 @@ Partial Class Form1
         CType(Me.PB_k1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PB_k2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -229,7 +238,7 @@ Partial Class Form1
         '
         'B_start
         '
-        Me.B_start.Location = New System.Drawing.Point(744, 19)
+        Me.B_start.Location = New System.Drawing.Point(821, 23)
         Me.B_start.Name = "B_start"
         Me.B_start.Size = New System.Drawing.Size(151, 37)
         Me.B_start.TabIndex = 18
@@ -238,14 +247,18 @@ Partial Class Form1
         '
         'PB_limIZ
         '
+        Me.PB_limIZ.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PB_limIZ.Image = CType(resources.GetObject("PB_limIZ.Image"), System.Drawing.Image)
         Me.PB_limIZ.Location = New System.Drawing.Point(26, 293)
         Me.PB_limIZ.Name = "PB_limIZ"
-        Me.PB_limIZ.Size = New System.Drawing.Size(25, 256)
+        Me.PB_limIZ.Size = New System.Drawing.Size(25, 249)
         Me.PB_limIZ.TabIndex = 19
         Me.PB_limIZ.TabStop = False
         '
         'PB_limDE
         '
+        Me.PB_limDE.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PB_limDE.Image = CType(resources.GetObject("PB_limDE.Image"), System.Drawing.Image)
         Me.PB_limDE.Location = New System.Drawing.Point(947, 293)
         Me.PB_limDE.Name = "PB_limDE"
         Me.PB_limDE.Size = New System.Drawing.Size(25, 256)
@@ -254,81 +267,155 @@ Partial Class Form1
         '
         'PB_m1
         '
-        Me.PB_m1.Location = New System.Drawing.Point(298, 354)
+        Me.PB_m1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PB_m1.Image = CType(resources.GetObject("PB_m1.Image"), System.Drawing.Image)
+        Me.PB_m1.Location = New System.Drawing.Point(298, 367)
         Me.PB_m1.Name = "PB_m1"
-        Me.PB_m1.Size = New System.Drawing.Size(150, 150)
+        Me.PB_m1.Size = New System.Drawing.Size(150, 125)
         Me.PB_m1.TabIndex = 21
         Me.PB_m1.TabStop = False
         '
         'PB_b1
         '
-        Me.PB_b1.Location = New System.Drawing.Point(41, 397)
+        Me.PB_b1.BackColor = System.Drawing.Color.DarkSalmon
+        Me.PB_b1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PB_b1.Location = New System.Drawing.Point(50, 403)
         Me.PB_b1.Name = "PB_b1"
-        Me.PB_b1.Size = New System.Drawing.Size(288, 18)
+        Me.PB_b1.Size = New System.Drawing.Size(249, 18)
         Me.PB_b1.TabIndex = 23
         Me.PB_b1.TabStop = False
         '
         'PB_b2
         '
-        Me.PB_b2.Location = New System.Drawing.Point(41, 445)
+        Me.PB_b2.BackColor = System.Drawing.Color.DarkSalmon
+        Me.PB_b2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PB_b2.Location = New System.Drawing.Point(50, 439)
         Me.PB_b2.Name = "PB_b2"
-        Me.PB_b2.Size = New System.Drawing.Size(288, 18)
+        Me.PB_b2.Size = New System.Drawing.Size(249, 18)
         Me.PB_b2.TabIndex = 24
         Me.PB_b2.TabStop = False
         '
         'PB_k3
         '
-        Me.PB_k3.Location = New System.Drawing.Point(697, 397)
+        Me.PB_k3.BackColor = System.Drawing.Color.PaleGreen
+        Me.PB_k3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PB_k3.Location = New System.Drawing.Point(730, 403)
         Me.PB_k3.Name = "PB_k3"
-        Me.PB_k3.Size = New System.Drawing.Size(263, 18)
+        Me.PB_k3.Size = New System.Drawing.Size(218, 18)
         Me.PB_k3.TabIndex = 23
         Me.PB_k3.TabStop = False
         '
         'PB_b3
         '
-        Me.PB_b3.Location = New System.Drawing.Point(428, 420)
+        Me.PB_b3.BackColor = System.Drawing.Color.DarkSalmon
+        Me.PB_b3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PB_b3.Location = New System.Drawing.Point(447, 420)
         Me.PB_b3.Name = "PB_b3"
-        Me.PB_b3.Size = New System.Drawing.Size(174, 18)
+        Me.PB_b3.Size = New System.Drawing.Size(135, 18)
         Me.PB_b3.TabIndex = 23
         Me.PB_b3.TabStop = False
         '
         'PB_b4
         '
-        Me.PB_b4.Location = New System.Drawing.Point(697, 445)
+        Me.PB_b4.BackColor = System.Drawing.Color.DarkSalmon
+        Me.PB_b4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PB_b4.Location = New System.Drawing.Point(730, 439)
         Me.PB_b4.Name = "PB_b4"
-        Me.PB_b4.Size = New System.Drawing.Size(263, 18)
+        Me.PB_b4.Size = New System.Drawing.Size(218, 18)
         Me.PB_b4.TabIndex = 23
         Me.PB_b4.TabStop = False
         '
         'PB_k1
         '
-        Me.PB_k1.Location = New System.Drawing.Point(428, 369)
+        Me.PB_k1.BackColor = System.Drawing.Color.PaleGreen
+        Me.PB_k1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PB_k1.Location = New System.Drawing.Point(447, 390)
         Me.PB_k1.Name = "PB_k1"
-        Me.PB_k1.Size = New System.Drawing.Size(174, 18)
+        Me.PB_k1.Size = New System.Drawing.Size(135, 18)
         Me.PB_k1.TabIndex = 23
         Me.PB_k1.TabStop = False
         '
         'PB_k2
         '
-        Me.PB_k2.Location = New System.Drawing.Point(428, 473)
+        Me.PB_k2.BackColor = System.Drawing.Color.PaleGreen
+        Me.PB_k2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PB_k2.Location = New System.Drawing.Point(447, 452)
         Me.PB_k2.Name = "PB_k2"
-        Me.PB_k2.Size = New System.Drawing.Size(174, 18)
+        Me.PB_k2.Size = New System.Drawing.Size(135, 18)
         Me.PB_k2.TabIndex = 23
         Me.PB_k2.TabStop = False
         '
         'PictureBox8
         '
-        Me.PictureBox8.Location = New System.Drawing.Point(581, 354)
+        Me.PictureBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox8.Image = CType(resources.GetObject("PictureBox8.Image"), System.Drawing.Image)
+        Me.PictureBox8.Location = New System.Drawing.Point(581, 367)
         Me.PictureBox8.Name = "PictureBox8"
-        Me.PictureBox8.Size = New System.Drawing.Size(150, 150)
+        Me.PictureBox8.Size = New System.Drawing.Size(150, 125)
         Me.PictureBox8.TabIndex = 25
         Me.PictureBox8.TabStop = False
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(562, 21)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(134, 20)
+        Me.Label10.TabIndex = 10
+        Me.Label10.Text = "Cantidad Datos"
+        '
+        'TB_Cantidad
+        '
+        Me.TB_Cantidad.Location = New System.Drawing.Point(704, 18)
+        Me.TB_Cantidad.Name = "TB_Cantidad"
+        Me.TB_Cantidad.Size = New System.Drawing.Size(85, 26)
+        Me.TB_Cantidad.TabIndex = 11
+        Me.TB_Cantidad.Text = "1000"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(610, 53)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(86, 20)
+        Me.Label11.TabIndex = 12
+        Me.Label11.Text = "Ganancia"
+        '
+        'TB_Ganancia
+        '
+        Me.TB_Ganancia.Location = New System.Drawing.Point(704, 50)
+        Me.TB_Ganancia.Name = "TB_Ganancia"
+        Me.TB_Ganancia.Size = New System.Drawing.Size(85, 26)
+        Me.TB_Ganancia.TabIndex = 13
+        Me.TB_Ganancia.Text = "100"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(26, 526)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(946, 22)
+        Me.PictureBox1.TabIndex = 26
+        Me.PictureBox1.TabStop = False
+        '
+        'PictureBox6
+        '
+        Me.PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), System.Drawing.Image)
+        Me.PictureBox6.Location = New System.Drawing.Point(50, 293)
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.Size = New System.Drawing.Size(898, 233)
+        Me.PictureBox6.TabIndex = 28
+        Me.PictureBox6.TabStop = False
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(984, 561)
+        Me.ClientSize = New System.Drawing.Size(984, 582)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.PB_b2)
         Me.Controls.Add(Me.PB_b4)
         Me.Controls.Add(Me.PB_k1)
@@ -343,8 +430,12 @@ Partial Class Form1
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.TB_b3)
         Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.TB_Ganancia)
         Me.Controls.Add(Me.TB_b2)
+        Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.TB_Cantidad)
+        Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.TB_b1)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.TB_k3)
@@ -359,8 +450,9 @@ Partial Class Form1
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox8)
         Me.Controls.Add(Me.PB_m1)
+        Me.Controls.Add(Me.PictureBox6)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.Margin = New System.Windows.Forms.Padding(5)
         Me.Name = "Form1"
         Me.Text = "Form1"
         CType(Me.PB_limIZ, System.ComponentModel.ISupportInitialize).EndInit()
@@ -374,6 +466,8 @@ Partial Class Form1
         CType(Me.PB_k1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PB_k2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -409,4 +503,10 @@ Partial Class Form1
     Friend WithEvents PB_k1 As PictureBox
     Friend WithEvents PB_k2 As PictureBox
     Friend WithEvents PictureBox8 As PictureBox
+    Friend WithEvents Label10 As Label
+    Friend WithEvents TB_Cantidad As TextBox
+    Friend WithEvents Label11 As Label
+    Friend WithEvents TB_Ganancia As TextBox
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents PictureBox6 As PictureBox
 End Class
