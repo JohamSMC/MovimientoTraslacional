@@ -43,7 +43,7 @@ Public Class Form1
         m1 = TB_m1.Text
         m2 = TB_m2.Text
         can_elementos = TB_Cantidad.Text
-        'ganancia = TGanacia.Text
+        ganancia = TB_Ganancia.Text
 
         sendOctave("clc")
         sendOctave("clear")
@@ -113,21 +113,21 @@ Public Class Form1
         For x1i = 0 To can_elementos - 1
             x1(x1i) = Val(x1_file.ReadLine) * ganancia
         Next
+        x1_file.Close()
         For t1i = 0 To can_elementos - 1
             t1(t1i) = Val(t1_file.ReadLine) * ganancia
         Next
+        t1_file.Close()
         '-------------------------------------------------
         For x2i = 0 To can_elementos - 1
             x2(x2i) = Val(x2_file.ReadLine) * ganancia
         Next
+        x2_file.Close()
         For t2i = 0 To can_elementos - 1
             t2(t2i) = Val(t2_file.ReadLine) * ganancia
         Next
-        '-------------------------------------------------
-        x1_file.Close()
-        t1_file.Close()
-        x2_file.Close()
         t2_file.Close()
+        '-------------------------------------------------
         MsgBox("Process Finished")
     End Sub
     Function getPathFiles(nameFile As String)
