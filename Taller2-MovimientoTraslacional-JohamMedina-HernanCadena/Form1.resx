@@ -6885,7 +6885,7 @@
         AMElM6AMyh2AYkCh7ev/2Q==
 </value>
   </data>
-  <data name="PictureBox8.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="PB_m2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEBLAEsAAD/4ReORXhpZgAATU0AKgAAAAgAFAEAAAMAAAABEgAAAAEBAAMAAAAB
         DYAAAAECAAMAAAADAAAA/gEGAAMAAAABAAIAAAEOAAIAAAAxAAABBAEPAAIAAAAWAAABNgEQAAIAAAAG
@@ -14300,4 +14300,7 @@
         80HOvkOYeaecMjBmMxzTmsPCUlD1qanhqEAAXJuEHrRiSEv7MpACmnyiMSBP/9k=
 </value>
   </data>
+  <metadata name="Timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

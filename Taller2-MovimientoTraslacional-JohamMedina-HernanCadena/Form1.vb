@@ -15,8 +15,6 @@ Public Class Form1
     Dim t1(10), t2(10) As Double
     Dim posx1, posx2 As Integer
 
-
-
     Dim posr1, posr2, posr3 As Integer
     Dim posa3, posa4 As Integer
     Dim tami1, tami2, tami3, tami4, tami5 As Integer
@@ -29,11 +27,13 @@ Public Class Form1
         pInfo.FileName = path
         pInfo.WindowStyle = ProcessWindowStyle.Minimized
         p = Process.Start(pInfo)
+        posx1 = PB_m2.Location.X
+        posx2 = PB_m1.Location.X
 
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles B_start.Click
-        'Dim pathFile As String = Application.StartupPath + "\data"
+
         Dim pathFile As String = Application.StartupPath
         k1 = TB_k1.Text
         k2 = TB_k2.Text
@@ -77,29 +77,15 @@ Public Class Form1
         sendOctave("c=length{(}t2{)};")
         sendOctave("tiempo=t2{(}c{)}*1.1;")
         sendOctave("[x2,t2]=impulse{(}G1,tiempo,tiempo/" & can_elementos & "{)};")
-        'sendOctave("dlmwrite{(}'" + pathFile + "\m1\t2.txt',t2,'\n'{)};")
-        'sendOctave("dlmwrite{(}'" + pathFile + "\m1\x2.txt',x2,'\n'{)};")
         sendOctave("dlmwrite{(}'" + pathFile + "\t2.txt',t2,'\n'{)};")
         sendOctave("dlmwrite{(}'" + pathFile + "\x2.txt',x2,'\n'{)};")
 
         sendOctave("c=length{(}t1{)};")
         sendOctave("tiempo=t1{(}c{)}*1.1;")
         sendOctave("[x1,t1]=impulse{(}G2,tiempo,tiempo/" & can_elementos & "{)};")
-        'sendOctave("dlmwrite{(}'" + pathFile + "\m2\t1.txt',t1,'\n'{)};")
-        'sendOctave("dlmwrite{(}'" + pathFile + "\m2\x1.txt',x1,'\n'{)};")
         sendOctave("dlmwrite{(}'" + pathFile + "\t1.txt',t1,'\n'{)};")
         sendOctave("dlmwrite{(}'" + pathFile + "\x1.txt',x1,'\n'{)};")
-
         sendOctave("exit")
-
-        'sendOctave("subplot{(}4,1,1{)}")
-        'sendOctave("step{(}G1{)}")
-        'sendOctave("subplot{(}4,1,2{)}")
-        'sendOctave("step{(}G2{)}")
-        'sendOctave("subplot{(}4,1,3{)}")
-        'sendOctave("impulse{(}G1{)}")
-        'sendOctave("subplot{(}4,1,4{)}")
-        'sendOctave("impulse{(}G2{)}")
         loadData()
     End Sub
 
@@ -110,58 +96,43 @@ Public Class Form1
         ReDim x2(can_elementos)
         ReDim t1(can_elementos)
         ReDim t2(can_elementos)
-
-        't1_file = getFile(getPathFiles("\m2\t1"))
-        'x1_file = getFile(getPathFiles("\m2\x1"))
-        't2_file = getFile(getPathFiles("\m1\t2"))
-        'x2_file = getFile(getPathFiles("\m1\x2"))
-        t1_file = getFile(getPathFiles("t1"))
-        x1_file = getFile(getPathFiles("x1"))
-        t2_file = getFile(getPathFiles("t2"))
-        x2_file = getFile(getPathFiles("x2"))
-        '-------------------------------------------------
-
+        '----------------------------------------------------------------
+        x1_file = New StreamReader(Application.StartupPath & "\x1.txt")
         For x1i = 0 To can_elementos - 1
             x1(x1i) = Val(x1_file.ReadLine) * ganancia
         Next
         x1_file.Close()
-
+        '----------------------------------------------------------------
+        t1_file = New StreamReader(Application.StartupPath & "\t1.txt")
         For t1i = 0 To can_elementos - 1
             t1(t1i) = Val(t1_file.ReadLine)
         Next
         t1_file.Close()
-
         '-------------------------------------------------
+        x2_file = New StreamReader(Application.StartupPath & "\x2.txt")
         For x2i = 0 To can_elementos - 1
             x2(x2i) = Val(x2_file.ReadLine) * ganancia
         Next
         x2_file.Close()
-
+        '----------------------------------------------------------------
+        t2_file = New StreamReader(Application.StartupPath & "\x2.txt")
         For t2i = 0 To can_elementos - 1
             t2(t2i) = Val(t2_file.ReadLine)
         Next
         t2_file.Close()
-
         '-------------------------------------------------
-        MsgBox("Process Finished")
     End Sub
-
-    Function getPathFiles(nameFile As String)
-        Dim pathFiles As String
-        pathFiles = Application.StartupPath + "\" + nameFile + ".txt"
-        Return pathFiles
-    End Function
-
-    Function getFile(path As String)
-        Dim file As StreamReader
-        file = New StreamReader(path)
-        Return file
-    End Function
-
     Sub sendOctave(cadena As String)
         AppActivate(path)
         SendKeys.SendWait(cadena & Chr(13))
         System.Threading.Thread.Sleep(50)
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+
+        PB_m1.Location = New Point(posx2 + x2(aux), PB_m1.Location.Y)
+        PB_m2.Location = New Point(posx1 + x1(aux), PB_m2.Location.Y)
+        aux += 1
     End Sub
 
 End Class
