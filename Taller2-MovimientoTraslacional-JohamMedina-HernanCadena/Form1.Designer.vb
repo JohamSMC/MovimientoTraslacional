@@ -414,7 +414,7 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(984, 582)
+        Me.ClientSize = New System.Drawing.Size(984, 581)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.PB_b2)
         Me.Controls.Add(Me.PB_b4)
@@ -453,7 +453,10 @@ Partial Class Form1
         Me.Controls.Add(Me.PictureBox6)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(5)
+        Me.MaximumSize = New System.Drawing.Size(1000, 620)
+        Me.MinimumSize = New System.Drawing.Size(1000, 620)
         Me.Name = "Form1"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "Form1"
         CType(Me.PB_limIZ, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PB_limDE, System.ComponentModel.ISupportInitialize).EndInit()
