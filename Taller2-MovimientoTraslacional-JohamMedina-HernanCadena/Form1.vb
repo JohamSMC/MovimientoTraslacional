@@ -31,6 +31,7 @@ Public Class Form1
         p = Process.Start(pInfo)
 
     End Sub
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles B_start.Click
         Dim pathFile As String = Application.StartupPath + "\data"
         k1 = TB_k1.Text
@@ -110,36 +111,44 @@ Public Class Form1
         t2_file = getFile(getPathFiles("\m1\t2"))
         x2_file = getFile(getPathFiles("\m1\x2"))
         '-------------------------------------------------
+
         For x1i = 0 To can_elementos - 1
             x1(x1i) = Val(x1_file.ReadLine) * ganancia
         Next
         x1_file.Close()
+
         For t1i = 0 To can_elementos - 1
-            t1(t1i) = Val(t1_file.ReadLine) * ganancia
+            t1(t1i) = Val(t1_file.ReadLine)
         Next
         t1_file.Close()
+
         '-------------------------------------------------
         For x2i = 0 To can_elementos - 1
             x2(x2i) = Val(x2_file.ReadLine) * ganancia
         Next
         x2_file.Close()
+
         For t2i = 0 To can_elementos - 1
-            t2(t2i) = Val(t2_file.ReadLine) * ganancia
+            t2(t2i) = Val(t2_file.ReadLine)
         Next
         t2_file.Close()
+
         '-------------------------------------------------
         MsgBox("Process Finished")
     End Sub
+
     Function getPathFiles(nameFile As String)
         Dim pathFiles As String
         pathFiles = Application.StartupPath + "\data\" + nameFile + ".txt"
         Return pathFiles
     End Function
+
     Function getFile(path As String)
         Dim file As StreamReader
         file = New StreamReader(path)
         Return file
     End Function
+
     Sub sendOctave(cadena As String)
         AppActivate(path)
         SendKeys.SendWait(cadena & Chr(13))
