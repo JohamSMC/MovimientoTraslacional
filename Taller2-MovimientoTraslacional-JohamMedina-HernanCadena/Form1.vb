@@ -15,9 +15,11 @@ Public Class Form1
     Dim t1(10), t2(10) As Double
     Dim posx1, posx2 As Integer
 
-    Dim posr1, posr2, posr3 As Integer
-    Dim posa3, posa4 As Integer
-    Dim tami1, tami2, tami3, tami4, tami5 As Integer
+    Dim tamI_B1, tamI_B2, tamI_B3, tamI_B4 As Integer
+    Dim tamI_K1, tamI_K2, tamI_K3 As Integer
+
+    Dim posI_k1, posI_k2, posI_k3 As Integer
+    Dim posI_b3, posI_b4 As Integer
 
     Dim can_elementos, ganancia As Integer
     Dim aux As Integer = 0
@@ -29,6 +31,24 @@ Public Class Form1
         p = Process.Start(pInfo)
         posx1 = PB_m2.Location.X
         posx2 = PB_m1.Location.X
+
+        tamI_B1 = PB_b1.Width
+        tamI_B2 = PB_b2.Width
+        tamI_B3 = PB_b3.Width
+        tamI_B4 = PB_b4.Width
+
+        tamI_K1 = PB_k1.Width
+        tamI_K2 = PB_k2.Width
+        tamI_K3 = PB_k3.Width
+
+        posI_b3 = PB_b3.Location.X
+        posI_b4 = PB_b4.Location.X
+
+        posI_k1 = PB_k1.Location.X
+        posI_k2 = PB_k2.Location.X
+        posI_k3 = PB_k3.Location.X
+
+        paso.Checked = True
 
     End Sub
 
@@ -71,22 +91,37 @@ Public Class Form1
         sendOctave("G1=a3/{(}a1*a3-a2*a2{)};")
         sendOctave("G2=a2/{(}a1*a3-a2*a2{)};")
 
-        sendOctave("[x2,t2]=impulse{(}G1{)};")
-        sendOctave("[x1,t1]=impulse{(}G2{)};")
+        If paso.Checked = True Then
+            sendOctave("[x2,t2]=step{(}G1{)};")
+            sendOctave("[x1,t1]=step{(}G2{)};")
+        ElseIf impulso.Checked = True Then
+            sendOctave("[x2,t2]=impulse{(}G1{)};")
+            sendOctave("[x1,t1]=impulse{(}G2{)};")
+        End If
 
         sendOctave("c=length{(}t2{)};")
         sendOctave("tiempo=t2{(}c{)}*1.1;")
-        sendOctave("[x2,t2]=impulse{(}G1,tiempo,tiempo/" & can_elementos & "{)};")
+        If paso.Checked = True Then
+            sendOctave("[x2,t2]=step{(}G1,tiempo,tiempo/" & can_elementos & "{)};")
+        ElseIf impulso.Checked = True Then
+            sendOctave("[x2,t2]=impulse{(}G1,tiempo,tiempo/" & can_elementos & "{)};")
+        End If
         sendOctave("dlmwrite{(}'" + pathFile + "\t2.txt',t2,'\n'{)};")
         sendOctave("dlmwrite{(}'" + pathFile + "\x2.txt',x2,'\n'{)};")
 
         sendOctave("c=length{(}t1{)};")
         sendOctave("tiempo=t1{(}c{)}*1.1;")
-        sendOctave("[x1,t1]=impulse{(}G2,tiempo,tiempo/" & can_elementos & "{)};")
+        If paso.Checked = True Then
+            sendOctave("[x1,t1]=step{(}G2,tiempo,tiempo/" & can_elementos & "{)};")
+        ElseIf impulso.Checked = True Then
+            sendOctave("[x1,t1]=impulse{(}G2,tiempo,tiempo/" & can_elementos & "{)};")
+        End If
         sendOctave("dlmwrite{(}'" + pathFile + "\t1.txt',t1,'\n'{)};")
         sendOctave("dlmwrite{(}'" + pathFile + "\x1.txt',x1,'\n'{)};")
         sendOctave("exit")
         loadData()
+        Timer1.Enabled = True
+        Form2.Show()
     End Sub
 
     Sub loadData()
@@ -115,7 +150,7 @@ Public Class Form1
         Next
         x2_file.Close()
         '----------------------------------------------------------------
-        t2_file = New StreamReader(Application.StartupPath & "\x2.txt")
+        t2_file = New StreamReader(Application.StartupPath & "\t2.txt")
         For t2i = 0 To can_elementos - 1
             t2(t2i) = Val(t2_file.ReadLine)
         Next
@@ -132,7 +167,36 @@ Public Class Form1
 
         PB_m1.Location = New Point(posx2 + x2(aux), PB_m1.Location.Y)
         PB_m2.Location = New Point(posx1 + x1(aux), PB_m2.Location.Y)
+
+        PB_b1.Width = tamI_B1 + x2(aux)
+        PB_b2.Width = tamI_B2 + x2(aux)
+
+        PB_k3.Location = New Point(posI_k3 + x2(aux), PB_k3.Location.Y)
+        PB_b4.Location = New Point(posI_b4 + x2(aux), PB_b4.Location.Y)
+
+        PB_k3.Width = PB_limDE.Location.X - PB_m2.Location.X
+        PB_b4.Width = PB_limDE.Location.X - PB_m2.Location.X
+        '(PB_m2.Location.X + PB_m2.Width) + (PB_limDE.Width / 2)
+
+        PB_k1.Location = New Point(posI_k1 + x2(aux), PB_k1.Location.Y)
+        PB_b3.Location = New Point(posI_b3 + x2(aux), PB_b3.Location.Y)
+        PB_k2.Location = New Point(posI_k2 + x2(aux), PB_k2.Location.Y)
+
+        PB_k1.Width = PB_m2.Location.X - (PB_m1.Location.X)
+        PB_b3.Width = PB_m2.Location.X - (PB_m1.Location.X)
+        PB_k2.Width = PB_m2.Location.X - (PB_m1.Location.X)
+
+        Form2.Chart_G1.Series(0).Points.AddXY(t2(aux), x2(aux))
+        Form2.Chart_G2.Series(0).Points.AddXY(t1(aux), x1(aux))
+
         aux += 1
+
+        If aux = (can_elementos - 1) Then
+            Timer1.Enabled = False
+        End If
+
+
     End Sub
 
 End Class
+

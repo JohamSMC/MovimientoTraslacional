@@ -61,6 +61,9 @@ Partial Class Form1
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.tipoRespuesta = New System.Windows.Forms.GroupBox()
+        Me.paso = New System.Windows.Forms.RadioButton()
+        Me.impulso = New System.Windows.Forms.RadioButton()
         CType(Me.PB_limIZ, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PB_limDE, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PB_m1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -74,6 +77,7 @@ Partial Class Form1
         CType(Me.PB_m2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.tipoRespuesta.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -118,7 +122,7 @@ Partial Class Form1
         Me.TB_k2.Name = "TB_k2"
         Me.TB_k2.Size = New System.Drawing.Size(85, 26)
         Me.TB_k2.TabIndex = 7
-        Me.TB_k2.Text = "1"
+        Me.TB_k2.Text = "10"
         '
         'Label3
         '
@@ -136,7 +140,7 @@ Partial Class Form1
         Me.TB_k1.Name = "TB_k1"
         Me.TB_k1.Size = New System.Drawing.Size(85, 26)
         Me.TB_k1.TabIndex = 5
-        Me.TB_k1.Text = "1"
+        Me.TB_k1.Text = "10"
         '
         'Label4
         '
@@ -154,7 +158,7 @@ Partial Class Form1
         Me.TB_k3.Name = "TB_k3"
         Me.TB_k3.Size = New System.Drawing.Size(85, 26)
         Me.TB_k3.TabIndex = 9
-        Me.TB_k3.Text = "1"
+        Me.TB_k3.Text = "10"
         '
         'Label5
         '
@@ -281,9 +285,9 @@ Partial Class Form1
         '
         Me.PB_b1.BackColor = System.Drawing.Color.DarkSalmon
         Me.PB_b1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PB_b1.Location = New System.Drawing.Point(50, 403)
+        Me.PB_b1.Location = New System.Drawing.Point(41, 403)
         Me.PB_b1.Name = "PB_b1"
-        Me.PB_b1.Size = New System.Drawing.Size(249, 18)
+        Me.PB_b1.Size = New System.Drawing.Size(268, 18)
         Me.PB_b1.TabIndex = 23
         Me.PB_b1.TabStop = False
         '
@@ -291,9 +295,9 @@ Partial Class Form1
         '
         Me.PB_b2.BackColor = System.Drawing.Color.DarkSalmon
         Me.PB_b2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PB_b2.Location = New System.Drawing.Point(50, 439)
+        Me.PB_b2.Location = New System.Drawing.Point(41, 439)
         Me.PB_b2.Name = "PB_b2"
-        Me.PB_b2.Size = New System.Drawing.Size(249, 18)
+        Me.PB_b2.Size = New System.Drawing.Size(268, 18)
         Me.PB_b2.TabIndex = 24
         Me.PB_b2.TabStop = False
         '
@@ -303,7 +307,7 @@ Partial Class Form1
         Me.PB_k3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PB_k3.Location = New System.Drawing.Point(730, 403)
         Me.PB_k3.Name = "PB_k3"
-        Me.PB_k3.Size = New System.Drawing.Size(218, 18)
+        Me.PB_k3.Size = New System.Drawing.Size(230, 18)
         Me.PB_k3.TabIndex = 23
         Me.PB_k3.TabStop = False
         '
@@ -311,9 +315,9 @@ Partial Class Form1
         '
         Me.PB_b3.BackColor = System.Drawing.Color.DarkSalmon
         Me.PB_b3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PB_b3.Location = New System.Drawing.Point(447, 420)
+        Me.PB_b3.Location = New System.Drawing.Point(438, 420)
         Me.PB_b3.Name = "PB_b3"
-        Me.PB_b3.Size = New System.Drawing.Size(135, 18)
+        Me.PB_b3.Size = New System.Drawing.Size(156, 18)
         Me.PB_b3.TabIndex = 23
         Me.PB_b3.TabStop = False
         '
@@ -323,7 +327,7 @@ Partial Class Form1
         Me.PB_b4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PB_b4.Location = New System.Drawing.Point(730, 439)
         Me.PB_b4.Name = "PB_b4"
-        Me.PB_b4.Size = New System.Drawing.Size(218, 18)
+        Me.PB_b4.Size = New System.Drawing.Size(230, 18)
         Me.PB_b4.TabIndex = 23
         Me.PB_b4.TabStop = False
         '
@@ -331,9 +335,9 @@ Partial Class Form1
         '
         Me.PB_k1.BackColor = System.Drawing.Color.PaleGreen
         Me.PB_k1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PB_k1.Location = New System.Drawing.Point(447, 390)
+        Me.PB_k1.Location = New System.Drawing.Point(438, 390)
         Me.PB_k1.Name = "PB_k1"
-        Me.PB_k1.Size = New System.Drawing.Size(135, 18)
+        Me.PB_k1.Size = New System.Drawing.Size(156, 18)
         Me.PB_k1.TabIndex = 23
         Me.PB_k1.TabStop = False
         '
@@ -341,9 +345,9 @@ Partial Class Form1
         '
         Me.PB_k2.BackColor = System.Drawing.Color.PaleGreen
         Me.PB_k2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PB_k2.Location = New System.Drawing.Point(447, 452)
+        Me.PB_k2.Location = New System.Drawing.Point(438, 452)
         Me.PB_k2.Name = "PB_k2"
-        Me.PB_k2.Size = New System.Drawing.Size(135, 18)
+        Me.PB_k2.Size = New System.Drawing.Size(156, 18)
         Me.PB_k2.TabIndex = 23
         Me.PB_k2.TabStop = False
         '
@@ -373,7 +377,7 @@ Partial Class Form1
         Me.TB_Cantidad.Name = "TB_Cantidad"
         Me.TB_Cantidad.Size = New System.Drawing.Size(85, 26)
         Me.TB_Cantidad.TabIndex = 11
-        Me.TB_Cantidad.Text = "1000"
+        Me.TB_Cantidad.Text = "200"
         '
         'Label11
         '
@@ -391,7 +395,7 @@ Partial Class Form1
         Me.TB_Ganancia.Name = "TB_Ganancia"
         Me.TB_Ganancia.Size = New System.Drawing.Size(85, 26)
         Me.TB_Ganancia.TabIndex = 13
-        Me.TB_Ganancia.Text = "100"
+        Me.TB_Ganancia.Text = "1000"
         '
         'PictureBox1
         '
@@ -414,22 +418,59 @@ Partial Class Form1
         '
         'Timer1
         '
+        Me.Timer1.Interval = 10
+        '
+        'tipoRespuesta
+        '
+        Me.tipoRespuesta.Controls.Add(Me.impulso)
+        Me.tipoRespuesta.Controls.Add(Me.paso)
+        Me.tipoRespuesta.Location = New System.Drawing.Point(772, 93)
+        Me.tipoRespuesta.Name = "tipoRespuesta"
+        Me.tipoRespuesta.Size = New System.Drawing.Size(200, 100)
+        Me.tipoRespuesta.TabIndex = 29
+        Me.tipoRespuesta.TabStop = False
+        Me.tipoRespuesta.Text = "Tipo de Respuesta"
+        '
+        'paso
+        '
+        Me.paso.AutoSize = True
+        Me.paso.Location = New System.Drawing.Point(16, 26)
+        Me.paso.Name = "paso"
+        Me.paso.Size = New System.Drawing.Size(67, 24)
+        Me.paso.TabIndex = 0
+        Me.paso.TabStop = True
+        Me.paso.Text = "Paso"
+        Me.paso.UseVisualStyleBackColor = True
+        '
+        'impulso
+        '
+        Me.impulso.AutoSize = True
+        Me.impulso.Location = New System.Drawing.Point(16, 56)
+        Me.impulso.Name = "impulso"
+        Me.impulso.Size = New System.Drawing.Size(90, 24)
+        Me.impulso.TabIndex = 1
+        Me.impulso.TabStop = True
+        Me.impulso.Text = "Impulso"
+        Me.impulso.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(984, 581)
+        Me.Controls.Add(Me.tipoRespuesta)
+        Me.Controls.Add(Me.PB_limIZ)
+        Me.Controls.Add(Me.PB_m2)
+        Me.Controls.Add(Me.PB_m1)
+        Me.Controls.Add(Me.PB_limDE)
+        Me.Controls.Add(Me.PB_k3)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.PB_b2)
         Me.Controls.Add(Me.PB_b4)
         Me.Controls.Add(Me.PB_k1)
         Me.Controls.Add(Me.PB_k2)
         Me.Controls.Add(Me.PB_b3)
-        Me.Controls.Add(Me.PB_k3)
         Me.Controls.Add(Me.PB_b1)
-        Me.Controls.Add(Me.PB_limDE)
-        Me.Controls.Add(Me.PB_limIZ)
         Me.Controls.Add(Me.B_start)
         Me.Controls.Add(Me.TB_b4)
         Me.Controls.Add(Me.Label9)
@@ -453,8 +494,6 @@ Partial Class Form1
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.TB_m1)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.PB_m2)
-        Me.Controls.Add(Me.PB_m1)
         Me.Controls.Add(Me.PictureBox6)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(5)
@@ -476,6 +515,8 @@ Partial Class Form1
         CType(Me.PB_m2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.tipoRespuesta.ResumeLayout(False)
+        Me.tipoRespuesta.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -518,4 +559,7 @@ Partial Class Form1
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox6 As PictureBox
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents tipoRespuesta As GroupBox
+    Friend WithEvents impulso As RadioButton
+    Friend WithEvents paso As RadioButton
 End Class
