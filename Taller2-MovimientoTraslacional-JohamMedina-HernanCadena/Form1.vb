@@ -33,7 +33,8 @@ Public Class Form1
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles B_start.Click
-        Dim pathFile As String = Application.StartupPath + "\data"
+        'Dim pathFile As String = Application.StartupPath + "\data"
+        Dim pathFile As String = Application.StartupPath
         k1 = TB_k1.Text
         k2 = TB_k2.Text
         k3 = TB_k3.Text
@@ -76,14 +77,18 @@ Public Class Form1
         sendOctave("c=length{(}t2{)};")
         sendOctave("tiempo=t2{(}c{)}*1.1;")
         sendOctave("[x2,t2]=impulse{(}G1,tiempo,tiempo/" & can_elementos & "{)};")
-        sendOctave("dlmwrite{(}'" + pathFile + "\m1\t2.txt',t2,'\n'{)};")
-        sendOctave("dlmwrite{(}'" + pathFile + "\m1\x2.txt',x2,'\n'{)};")
+        'sendOctave("dlmwrite{(}'" + pathFile + "\m1\t2.txt',t2,'\n'{)};")
+        'sendOctave("dlmwrite{(}'" + pathFile + "\m1\x2.txt',x2,'\n'{)};")
+        sendOctave("dlmwrite{(}'" + pathFile + "\t2.txt',t2,'\n'{)};")
+        sendOctave("dlmwrite{(}'" + pathFile + "\x2.txt',x2,'\n'{)};")
 
         sendOctave("c=length{(}t1{)};")
         sendOctave("tiempo=t1{(}c{)}*1.1;")
         sendOctave("[x1,t1]=impulse{(}G2,tiempo,tiempo/" & can_elementos & "{)};")
-        sendOctave("dlmwrite{(}'" + pathFile + "\m2\t1.txt',t1,'\n'{)};")
-        sendOctave("dlmwrite{(}'" + pathFile + "\m2\x1.txt',x1,'\n'{)};")
+        'sendOctave("dlmwrite{(}'" + pathFile + "\m2\t1.txt',t1,'\n'{)};")
+        'sendOctave("dlmwrite{(}'" + pathFile + "\m2\x1.txt',x1,'\n'{)};")
+        sendOctave("dlmwrite{(}'" + pathFile + "\t1.txt',t1,'\n'{)};")
+        sendOctave("dlmwrite{(}'" + pathFile + "\x1.txt',x1,'\n'{)};")
 
         sendOctave("exit")
 
@@ -106,10 +111,14 @@ Public Class Form1
         ReDim t1(can_elementos)
         ReDim t2(can_elementos)
 
-        t1_file = getFile(getPathFiles("\m2\t1"))
-        x1_file = getFile(getPathFiles("\m2\x1"))
-        t2_file = getFile(getPathFiles("\m1\t2"))
-        x2_file = getFile(getPathFiles("\m1\x2"))
+        't1_file = getFile(getPathFiles("\m2\t1"))
+        'x1_file = getFile(getPathFiles("\m2\x1"))
+        't2_file = getFile(getPathFiles("\m1\t2"))
+        'x2_file = getFile(getPathFiles("\m1\x2"))
+        t1_file = getFile(getPathFiles("t1"))
+        x1_file = getFile(getPathFiles("x1"))
+        t2_file = getFile(getPathFiles("t2"))
+        x2_file = getFile(getPathFiles("x2"))
         '-------------------------------------------------
 
         For x1i = 0 To can_elementos - 1
@@ -139,7 +148,7 @@ Public Class Form1
 
     Function getPathFiles(nameFile As String)
         Dim pathFiles As String
-        pathFiles = Application.StartupPath + "\data\" + nameFile + ".txt"
+        pathFiles = Application.StartupPath + "\" + nameFile + ".txt"
         Return pathFiles
     End Function
 
