@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TB_m1 = New System.Windows.Forms.TextBox()
@@ -52,13 +53,14 @@ Partial Class Form1
         Me.PB_b4 = New System.Windows.Forms.PictureBox()
         Me.PB_k1 = New System.Windows.Forms.PictureBox()
         Me.PB_k2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
+        Me.PB_m2 = New System.Windows.Forms.PictureBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.TB_Cantidad = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.TB_Ganancia = New System.Windows.Forms.TextBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.PB_limIZ, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PB_limDE, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PB_m1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -69,7 +71,7 @@ Partial Class Form1
         CType(Me.PB_b4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PB_k1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PB_k2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PB_m2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -345,15 +347,15 @@ Partial Class Form1
         Me.PB_k2.TabIndex = 23
         Me.PB_k2.TabStop = False
         '
-        'PictureBox8
+        'PB_m2
         '
-        Me.PictureBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox8.Image = CType(resources.GetObject("PictureBox8.Image"), System.Drawing.Image)
-        Me.PictureBox8.Location = New System.Drawing.Point(581, 367)
-        Me.PictureBox8.Name = "PictureBox8"
-        Me.PictureBox8.Size = New System.Drawing.Size(150, 125)
-        Me.PictureBox8.TabIndex = 25
-        Me.PictureBox8.TabStop = False
+        Me.PB_m2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PB_m2.Image = CType(resources.GetObject("PB_m2.Image"), System.Drawing.Image)
+        Me.PB_m2.Location = New System.Drawing.Point(581, 367)
+        Me.PB_m2.Name = "PB_m2"
+        Me.PB_m2.Size = New System.Drawing.Size(150, 125)
+        Me.PB_m2.TabIndex = 25
+        Me.PB_m2.TabStop = False
         '
         'Label10
         '
@@ -410,6 +412,9 @@ Partial Class Form1
         Me.PictureBox6.TabIndex = 28
         Me.PictureBox6.TabStop = False
         '
+        'Timer1
+        '
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
@@ -448,7 +453,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.TB_m1)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.PictureBox8)
+        Me.Controls.Add(Me.PB_m2)
         Me.Controls.Add(Me.PB_m1)
         Me.Controls.Add(Me.PictureBox6)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -468,7 +473,7 @@ Partial Class Form1
         CType(Me.PB_b4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PB_k1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PB_k2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PB_m2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -505,11 +510,12 @@ Partial Class Form1
     Friend WithEvents PB_b4 As PictureBox
     Friend WithEvents PB_k1 As PictureBox
     Friend WithEvents PB_k2 As PictureBox
-    Friend WithEvents PictureBox8 As PictureBox
+    Friend WithEvents PB_m2 As PictureBox
     Friend WithEvents Label10 As Label
     Friend WithEvents TB_Cantidad As TextBox
     Friend WithEvents Label11 As Label
     Friend WithEvents TB_Ganancia As TextBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox6 As PictureBox
+    Friend WithEvents Timer1 As Timer
 End Class
