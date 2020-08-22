@@ -95,7 +95,7 @@ Partial Class Form2
         Me.Controls.Add(Me.Chart_G1)
         Me.Name = "Form2"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "Form2"
+        Me.Text = "Graficas"
         CType(Me.Chart_G1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Chart_G2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

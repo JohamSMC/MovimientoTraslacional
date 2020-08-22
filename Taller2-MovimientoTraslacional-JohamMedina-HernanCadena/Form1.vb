@@ -1,52 +1,49 @@
 ﻿Imports System.IO
 
 Public Class Form1
-    'Note: The next path should be a path of octave cli
-    'C:\Octave\Octave-5.2.0\mingw64\bin\octave-cli-5.2.0.exe
+
     Dim path As String
     Dim pInfo As New ProcessStartInfo
     Dim p As Process
-
     Dim k1, k2, k3 As Double
     Dim b1, b2, b3, b4 As Double
     Dim m1, m2 As Double
-
     Dim x1(10), x2(10) As Double
     Dim t1(10), t2(10) As Double
     Dim posx1, posx2 As Integer
-
-    Dim tamI_B1, tamI_B2, tamI_B3, tamI_B4 As Integer
-    Dim tamI_K1, tamI_K2, tamI_K3 As Integer
-
+    Dim poslm1, poslm2 As Integer
+    Dim postm1, postm2 As Integer
     Dim posI_k1, posI_k2, posI_k3 As Integer
-    Dim posI_b3, posI_b4 As Integer
-
+    Dim pos_b1, pos_b2, posI_b3, posI_b4 As Integer
     Dim can_elementos, ganancia As Integer
     Dim aux As Integer = 0
+    Dim filePath As String
 
+    Sub setPath(pathin As String)
+        path = pathin
+    End Sub
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        path = "C:\Octave\Octave-5.2.0\mingw64\bin\octave-cli-5.2.0.exe"
+
         pInfo.FileName = path
         pInfo.WindowStyle = ProcessWindowStyle.Minimized
         p = Process.Start(pInfo)
+
         posx1 = PB_m2.Location.X
         posx2 = PB_m1.Location.X
+        poslm1 = label_masa1.Location.X
+        poslm2 = label_masa2.Location.X
+        postm1 = TB_m1.Location.X
+        postm2 = TB_m2.Location.X
 
-        tamI_B1 = PB_b1.Width
-        tamI_B2 = PB_b2.Width
-        tamI_B3 = PB_b3.Width
-        tamI_B4 = PB_b4.Width
+        pos_b1 = PB_b1.Location.X - 2
+        pos_b2 = PB_b2.Location.X - 2
 
-        tamI_K1 = PB_k1.Width
-        tamI_K2 = PB_k2.Width
-        tamI_K3 = PB_k3.Width
+        posI_k1 = PB_m1.Location.X + PB_m2.Width
+        posI_b3 = PB_m1.Location.X + PB_m2.Width
+        posI_k2 = PB_m1.Location.X + PB_m2.Width
 
-        posI_b3 = PB_b3.Location.X
-        posI_b4 = PB_b4.Location.X
-
-        posI_k1 = PB_k1.Location.X
-        posI_k2 = PB_k2.Location.X
-        posI_k3 = PB_k3.Location.X
+        posI_k3 = PB_m2.Location.X + PB_m2.Width
+        posI_b4 = PB_m2.Location.X + PB_m2.Width
 
         paso.Checked = True
 
@@ -121,7 +118,7 @@ Public Class Form1
         sendOctave("exit")
         loadData()
         Timer1.Enabled = True
-        Form2.Show()
+
     End Sub
 
     Sub loadData()
@@ -143,7 +140,7 @@ Public Class Form1
             t1(t1i) = Val(t1_file.ReadLine)
         Next
         t1_file.Close()
-        '-------------------------------------------------
+        '----------------------------------------------------------------
         x2_file = New StreamReader(Application.StartupPath & "\x2.txt")
         For x2i = 0 To can_elementos - 1
             x2(x2i) = Val(x2_file.ReadLine) * ganancia
@@ -155,7 +152,7 @@ Public Class Form1
             t2(t2i) = Val(t2_file.ReadLine)
         Next
         t2_file.Close()
-        '-------------------------------------------------
+        '----------------------------------------------------------------
     End Sub
     Sub sendOctave(cadena As String)
         AppActivate(path)
@@ -164,39 +161,41 @@ Public Class Form1
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-
+        '-------------------------------------------------------------------------
         PB_m1.Location = New Point(posx2 + x2(aux), PB_m1.Location.Y)
         PB_m2.Location = New Point(posx1 + x1(aux), PB_m2.Location.Y)
-
-        PB_b1.Width = tamI_B1 + x2(aux)
-        PB_b2.Width = tamI_B2 + x2(aux)
-
-        PB_k3.Location = New Point(posI_k3 + x2(aux), PB_k3.Location.Y)
-        PB_b4.Location = New Point(posI_b4 + x2(aux), PB_b4.Location.Y)
-
-        PB_k3.Width = PB_limDE.Location.X - PB_m2.Location.X
-        PB_b4.Width = PB_limDE.Location.X - PB_m2.Location.X
-        '(PB_m2.Location.X + PB_m2.Width) + (PB_limDE.Width / 2)
-
-        PB_k1.Location = New Point(posI_k1 + x2(aux), PB_k1.Location.Y)
-        PB_b3.Location = New Point(posI_b3 + x2(aux), PB_b3.Location.Y)
-        PB_k2.Location = New Point(posI_k2 + x2(aux), PB_k2.Location.Y)
-
-        PB_k1.Width = PB_m2.Location.X - (PB_m1.Location.X)
-        PB_b3.Width = PB_m2.Location.X - (PB_m1.Location.X)
-        PB_k2.Width = PB_m2.Location.X - (PB_m1.Location.X)
-
+        label_masa1.Location = New Point(poslm1 + x2(aux), label_masa1.Location.Y)
+        label_masa2.Location = New Point(poslm2 + x1(aux), label_masa2.Location.Y)
+        TB_m1.Location = New Point(postm1 + x2(aux), TB_m1.Location.Y)
+        TB_m2.Location = New Point(postm2 + x1(aux), TB_m2.Location.Y)
+        '-------------------------------------------------------------------------
+        PB_k1.Location = New Point(posI_k1 + x2(aux) - 1, PB_k1.Location.Y)
+        PB_b3.Location = New Point(posI_b3 + x2(aux) - 1, PB_b3.Location.Y)
+        PB_k2.Location = New Point(posI_k2 + x2(aux) - 1, PB_k2.Location.Y)
+        '-------------------------------------------------------------------------
+        PB_k3.Location = New Point(posI_k3 + x1(aux) - 1, PB_k3.Location.Y)
+        PB_b4.Location = New Point(posI_b4 + x1(aux) - 1, PB_b4.Location.Y)
+        '-------------------------------------------------------------------------
+        PB_b1.Width = PB_m1.Location.X - pos_b1 + 3
+        PB_b2.Width = PB_m1.Location.X - pos_b2 + 3
+        '-------------------------------------------------------------------------
+        PB_k1.Width = PB_m2.Location.X - (PB_m1.Location.X + PB_m2.Width) + 3
+        PB_b3.Width = PB_m2.Location.X - (PB_m1.Location.X + PB_m2.Width) + 3
+        PB_k2.Width = PB_m2.Location.X - (PB_m1.Location.X + PB_m2.Width) + 3
+        '-------------------------------------------------------------------------
+        PB_k3.Width = PB_limDE.Location.X - (PB_m2.Location.X + PB_m2.Width) + 3
+        PB_b4.Width = PB_limDE.Location.X - (PB_m2.Location.X + PB_m2.Width) + 3
+        '-------------------------------------------------------------------------
         Form2.Chart_G1.Series(0).Points.AddXY(t2(aux), x2(aux))
         Form2.Chart_G2.Series(0).Points.AddXY(t1(aux), x1(aux))
-
+        '-------------------------------------------------------------------------
         aux += 1
-
         If aux = (can_elementos - 1) Then
+            Form2.Show()
             Timer1.Enabled = False
         End If
-
-
     End Sub
+
 
 End Class
 
