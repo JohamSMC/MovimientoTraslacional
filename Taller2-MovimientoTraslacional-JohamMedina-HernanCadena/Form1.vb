@@ -24,6 +24,16 @@ Public Class Form1
     Dim iniWidth_k1, iniWidth_k2, iniWidth_k3 As Integer
     Dim iniWidth_b1, iniWidth_b2, iniWidth_b3, iniWidth_b4 As Integer
 
+    Private Sub TB_m2_TextChanged(sender As Object, e As EventArgs) Handles TB_m2.TextChanged
+        If IsNumeric(TB_m2.Text) = False Or Val(TB_m2.Text) < 0 Then
+            TB_m2.Text = 10
+        End If
+    End Sub
+    Private Sub TB_m1_TextChanged(sender As Object, e As EventArgs) Handles TB_m1.TextChanged
+        If IsNumeric(TB_m1.Text) = False Or Val(TB_m1.Text) < 0 Then
+            TB_m1.Text = 10
+        End If
+    End Sub
     Private Sub TB_b1_TextChanged(sender As Object, e As EventArgs) Handles TB_b1.TextChanged
         If IsNumeric(TB_b1.Text) = False Or Val(TB_b1.Text) < 0 Then
             TB_b1.Text = 0
@@ -80,6 +90,7 @@ Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+        initOctave()
         posx1 = PB_m2.Location.X
         posx2 = PB_m1.Location.X
         poslm1 = label_masa1.Location.X
@@ -120,12 +131,22 @@ Public Class Form1
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles B_start.Click
-
-        pInfo.FileName = path
-        pInfo.WindowStyle = ProcessWindowStyle.Minimized
-        p = Process.Start(pInfo)
-        System.Threading.Thread.Sleep(3000)
-
+        label_B1.Visible = False
+        label_B2.Visible = False
+        label_B3.Visible = False
+        label_B4.Visible = False
+        label_K1.Visible = False
+        label_K2.Visible = False
+        label_K3.Visible = False
+        TB_Cantidad.Enabled = False
+        TB_Ganancia.Enabled = False
+        TB_b1.Enabled = False
+        TB_b2.Enabled = False
+        TB_b3.Enabled = False
+        TB_b4.Enabled = False
+        TB_k1.Enabled = False
+        TB_k2.Enabled = False
+        TB_k3.Enabled = False
         B_start.Enabled = False
         B_restart.Enabled = False
         paso.Enabled = False
@@ -222,6 +243,12 @@ Public Class Form1
         Timer1.Enabled = True
 
     End Sub
+    Sub initOctave()
+        pInfo.FileName = path
+        pInfo.WindowStyle = ProcessWindowStyle.Minimized
+        p = Process.Start(pInfo)
+        System.Threading.Thread.Sleep(3000)
+    End Sub
 
     Sub loadData()
         Dim t1_file, x1_file As StreamReader
@@ -277,17 +304,9 @@ Public Class Form1
         PB_k1.Location = New Point(posI_k1 + x2(aux) - 1, PB_k1.Location.Y)
         PB_b3.Location = New Point(posI_b3 + x2(aux) - 1, PB_b3.Location.Y)
         PB_k2.Location = New Point(posI_k2 + x2(aux) - 1, PB_k2.Location.Y)
-        label_K1.Location = New Point(posI_label_k1 + x2(aux) - 1, label_K1.Location.Y)
-        label_B3.Location = New Point(posI_label_b3 + x2(aux) - 1, label_B3.Location.Y)
-        label_K2.Location = New Point(posI_label_k2 + x2(aux) - 1, label_K2.Location.Y)
         '-------------------------------------------------------------------------
         PB_k3.Location = New Point(posI_k3 + x1(aux) - 1, PB_k3.Location.Y)
         PB_b4.Location = New Point(posI_b4 + x1(aux) - 1, PB_b4.Location.Y)
-        label_K3.Location = New Point(posI_label_k3 + x1(aux) - 1, label_K3.Location.Y)
-        label_B4.Location = New Point(posI_label_b4 + x1(aux) - 1, label_B4.Location.Y)
-        '-------------------------------------------------------------------------
-        label_B1.Location = New Point(posI_label_b1 + x2(aux), label_B1.Location.Y)
-        label_B2.Location = New Point(posI_label_b2 + x2(aux), label_B2.Location.Y)
         '-------------------------------------------------------------------------
         PB_b1.Width = PB_m1.Location.X - pos_b1 + 3
         PB_b2.Width = PB_m1.Location.X - pos_b2 + 3
@@ -334,7 +353,7 @@ Public Class Form1
         paso.Enabled = True
         impulso.Enabled = True
         restartSimulation()
-
+        initOctave()
         TB_k1.Text = 10
         TB_k2.Text = 10
         TB_k3.Text = 10
@@ -346,7 +365,22 @@ Public Class Form1
         TB_m2.Text = 10
         TB_Cantidad.Text = 100
         TB_Ganancia.Text = 1000
-
+        label_B1.Visible = True
+        label_B2.Visible = True
+        label_B3.Visible = True
+        label_B4.Visible = True
+        label_K1.Visible = True
+        label_K2.Visible = True
+        label_K3.Visible = True
+        TB_b1.Enabled = True
+        TB_b2.Enabled = True
+        TB_b3.Enabled = True
+        TB_b4.Enabled = True
+        TB_k1.Enabled = True
+        TB_k2.Enabled = True
+        TB_k3.Enabled = True
+        TB_Cantidad.Enabled = True
+        TB_Ganancia.Enabled = True
         B_start.Enabled = True
     End Sub
 
