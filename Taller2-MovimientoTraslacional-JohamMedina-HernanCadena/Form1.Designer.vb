@@ -321,9 +321,9 @@ Partial Class Form1
         '
         Me.PB_b1.BackColor = System.Drawing.Color.DarkSalmon
         Me.PB_b1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PB_b1.Location = New System.Drawing.Point(41, 251)
+        Me.PB_b1.Location = New System.Drawing.Point(41, 252)
         Me.PB_b1.Name = "PB_b1"
-        Me.PB_b1.Size = New System.Drawing.Size(215, 31)
+        Me.PB_b1.Size = New System.Drawing.Size(215, 23)
         Me.PB_b1.TabIndex = 23
         Me.PB_b1.TabStop = False
         '
@@ -331,9 +331,9 @@ Partial Class Form1
         '
         Me.PB_b2.BackColor = System.Drawing.Color.DarkSalmon
         Me.PB_b2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PB_b2.Location = New System.Drawing.Point(41, 298)
+        Me.PB_b2.Location = New System.Drawing.Point(41, 296)
         Me.PB_b2.Name = "PB_b2"
-        Me.PB_b2.Size = New System.Drawing.Size(215, 31)
+        Me.PB_b2.Size = New System.Drawing.Size(215, 23)
         Me.PB_b2.TabIndex = 24
         Me.PB_b2.TabStop = False
         '
@@ -343,7 +343,7 @@ Partial Class Form1
         Me.PB_k3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PB_k3.Location = New System.Drawing.Point(651, 251)
         Me.PB_k3.Name = "PB_k3"
-        Me.PB_k3.Size = New System.Drawing.Size(263, 31)
+        Me.PB_k3.Size = New System.Drawing.Size(263, 23)
         Me.PB_k3.TabIndex = 23
         Me.PB_k3.TabStop = False
         '
@@ -353,7 +353,7 @@ Partial Class Form1
         Me.PB_b3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PB_b3.Location = New System.Drawing.Point(377, 275)
         Me.PB_b3.Name = "PB_b3"
-        Me.PB_b3.Size = New System.Drawing.Size(156, 31)
+        Me.PB_b3.Size = New System.Drawing.Size(156, 23)
         Me.PB_b3.TabIndex = 23
         Me.PB_b3.TabStop = False
         '
@@ -363,7 +363,7 @@ Partial Class Form1
         Me.PB_b4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PB_b4.Location = New System.Drawing.Point(651, 298)
         Me.PB_b4.Name = "PB_b4"
-        Me.PB_b4.Size = New System.Drawing.Size(263, 31)
+        Me.PB_b4.Size = New System.Drawing.Size(263, 23)
         Me.PB_b4.TabIndex = 23
         Me.PB_b4.TabStop = False
         '
@@ -373,7 +373,7 @@ Partial Class Form1
         Me.PB_k1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PB_k1.Location = New System.Drawing.Point(377, 239)
         Me.PB_k1.Name = "PB_k1"
-        Me.PB_k1.Size = New System.Drawing.Size(156, 31)
+        Me.PB_k1.Size = New System.Drawing.Size(156, 23)
         Me.PB_k1.TabIndex = 23
         Me.PB_k1.TabStop = False
         '
@@ -383,7 +383,7 @@ Partial Class Form1
         Me.PB_k2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PB_k2.Location = New System.Drawing.Point(377, 312)
         Me.PB_k2.Name = "PB_k2"
-        Me.PB_k2.Size = New System.Drawing.Size(156, 31)
+        Me.PB_k2.Size = New System.Drawing.Size(156, 23)
         Me.PB_k2.TabIndex = 23
         Me.PB_k2.TabStop = False
         '
@@ -529,8 +529,9 @@ Partial Class Form1
         'label_B1
         '
         Me.label_B1.AutoSize = True
+        Me.label_B1.BackColor = System.Drawing.Color.DarkSalmon
         Me.label_B1.Font = New System.Drawing.Font("Maiandra GD", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.label_B1.Location = New System.Drawing.Point(128, 251)
+        Me.label_B1.Location = New System.Drawing.Point(128, 255)
         Me.label_B1.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.label_B1.Name = "label_B1"
         Me.label_B1.Size = New System.Drawing.Size(24, 19)
@@ -540,6 +541,7 @@ Partial Class Form1
         'label_B2
         '
         Me.label_B2.AutoSize = True
+        Me.label_B2.BackColor = System.Drawing.Color.DarkSalmon
         Me.label_B2.Font = New System.Drawing.Font("Maiandra GD", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label_B2.Location = New System.Drawing.Point(128, 298)
         Me.label_B2.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
@@ -551,8 +553,9 @@ Partial Class Form1
         'label_K1
         '
         Me.label_K1.AutoSize = True
+        Me.label_K1.BackColor = System.Drawing.Color.PaleGreen
         Me.label_K1.Font = New System.Drawing.Font("Maiandra GD", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.label_K1.Location = New System.Drawing.Point(438, 239)
+        Me.label_K1.Location = New System.Drawing.Point(438, 240)
         Me.label_K1.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.label_K1.Name = "label_K1"
         Me.label_K1.Size = New System.Drawing.Size(23, 19)
@@ -562,8 +565,9 @@ Partial Class Form1
         'label_B3
         '
         Me.label_B3.AutoSize = True
+        Me.label_B3.BackColor = System.Drawing.Color.DarkSalmon
         Me.label_B3.Font = New System.Drawing.Font("Maiandra GD", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.label_B3.Location = New System.Drawing.Point(438, 275)
+        Me.label_B3.Location = New System.Drawing.Point(438, 276)
         Me.label_B3.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.label_B3.Name = "label_B3"
         Me.label_B3.Size = New System.Drawing.Size(27, 19)
@@ -573,8 +577,9 @@ Partial Class Form1
         'label_K2
         '
         Me.label_K2.AutoSize = True
+        Me.label_K2.BackColor = System.Drawing.Color.PaleGreen
         Me.label_K2.Font = New System.Drawing.Font("Maiandra GD", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.label_K2.Location = New System.Drawing.Point(438, 312)
+        Me.label_K2.Location = New System.Drawing.Point(438, 313)
         Me.label_K2.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.label_K2.Name = "label_K2"
         Me.label_K2.Size = New System.Drawing.Size(26, 19)
@@ -584,8 +589,9 @@ Partial Class Form1
         'label_K3
         '
         Me.label_K3.AutoSize = True
+        Me.label_K3.BackColor = System.Drawing.Color.PaleGreen
         Me.label_K3.Font = New System.Drawing.Font("Maiandra GD", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.label_K3.Location = New System.Drawing.Point(762, 251)
+        Me.label_K3.Location = New System.Drawing.Point(762, 252)
         Me.label_K3.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.label_K3.Name = "label_K3"
         Me.label_K3.Size = New System.Drawing.Size(26, 19)
@@ -595,8 +601,9 @@ Partial Class Form1
         'label_B4
         '
         Me.label_B4.AutoSize = True
+        Me.label_B4.BackColor = System.Drawing.Color.DarkSalmon
         Me.label_B4.Font = New System.Drawing.Font("Maiandra GD", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.label_B4.Location = New System.Drawing.Point(762, 298)
+        Me.label_B4.Location = New System.Drawing.Point(762, 299)
         Me.label_B4.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.label_B4.Name = "label_B4"
         Me.label_B4.Size = New System.Drawing.Size(27, 19)

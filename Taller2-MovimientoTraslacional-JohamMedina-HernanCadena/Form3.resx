@@ -126,7 +126,7 @@
 Para empezar selecciona la ruta donde se encuentra el ejecutable de Octave cli con el boton "Buscar", luego selecciona de la lista el indicado y dale "ACEPTAR"
 
 Nota:
-La ruta por defecto puede ser:
+La ruta debe parecerse al siguiente ejemplo:
 C:\Octave\Octave-X.X.X\mingw64\bin\octave-cli-X.X.X.exe</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
