@@ -121,9 +121,13 @@
     <value>17, 17</value>
   </metadata>
   <data name="RichTextBox1.Text" xml:space="preserve">
-    <value>Bienvenido a la simulacion de Movimiento Traslacional realizada por Joham Medina y Hernan Cadena, estudiantes de la asignatura de Simulacion de Computadores de la Universidad Pedagogica y Tecnologica de Colombia
+    <value>Bienvenido a la simulacion de Movimiento Traslacional realizada por Joham Medina y Hernan Cadena, estudiantes de la asignatura de Simulacion de Computadores de la Universidad Pedagógica y Tecnológica de Colombia
 
-Para empezar selecciona la ruta donde se encuentra el ejecutable de Octave cli con el boton "Buscar", luego selecciona de la lista el indicado y dale aceptar</value>
+Para empezar selecciona la ruta donde se encuentra el ejecutable de Octave cli con el boton "Buscar", luego selecciona de la lista el indicado y dale "ACEPTAR"
+
+Nota:
+La ruta por defecto puede ser:
+C:\Octave\Octave-X.X.X\mingw64\bin\octave-cli-X.X.X.exe</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="PictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

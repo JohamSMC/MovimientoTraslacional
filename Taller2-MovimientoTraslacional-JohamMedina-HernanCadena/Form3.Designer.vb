@@ -37,7 +37,7 @@ Partial Class Form3
         '
         'examineButton
         '
-        Me.examineButton.Location = New System.Drawing.Point(170, 506)
+        Me.examineButton.Location = New System.Drawing.Point(170, 450)
         Me.examineButton.Name = "examineButton"
         Me.examineButton.Size = New System.Drawing.Size(113, 35)
         Me.examineButton.TabIndex = 39
@@ -49,9 +49,9 @@ Partial Class Form3
         Me.filesListBox.Font = New System.Drawing.Font("Maiandra GD", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.filesListBox.FormattingEnabled = True
         Me.filesListBox.ItemHeight = 16
-        Me.filesListBox.Location = New System.Drawing.Point(40, 357)
+        Me.filesListBox.Location = New System.Drawing.Point(40, 351)
         Me.filesListBox.Name = "filesListBox"
-        Me.filesListBox.Size = New System.Drawing.Size(395, 132)
+        Me.filesListBox.Size = New System.Drawing.Size(395, 84)
         Me.filesListBox.TabIndex = 38
         '
         'browseButton
@@ -68,16 +68,16 @@ Partial Class Form3
         Me.RichTextBox1.BackColor = System.Drawing.Color.Linen
         Me.RichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.RichTextBox1.Font = New System.Drawing.Font("Maiandra GD", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RichTextBox1.Location = New System.Drawing.Point(40, 126)
+        Me.RichTextBox1.Location = New System.Drawing.Point(40, 86)
         Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(409, 138)
+        Me.RichTextBox1.Size = New System.Drawing.Size(409, 208)
         Me.RichTextBox1.TabIndex = 41
         Me.RichTextBox1.Text = resources.GetString("RichTextBox1.Text")
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(170, 41)
+        Me.PictureBox1.Location = New System.Drawing.Point(170, 12)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(129, 68)
         Me.PictureBox1.TabIndex = 42
@@ -97,7 +97,7 @@ Partial Class Form3
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Maiandra GD", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(12, 413)
+        Me.Label2.Location = New System.Drawing.Point(12, 383)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(14, 14)
         Me.Label2.TabIndex = 43
@@ -107,7 +107,7 @@ Partial Class Form3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Maiandra GD", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(150, 517)
+        Me.Label3.Location = New System.Drawing.Point(150, 461)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(14, 14)
         Me.Label3.TabIndex = 43
@@ -118,7 +118,7 @@ Partial Class Form3
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Linen
-        Me.ClientSize = New System.Drawing.Size(477, 553)
+        Me.ClientSize = New System.Drawing.Size(477, 491)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
