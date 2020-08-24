@@ -65,6 +65,15 @@ Partial Class Form1
         Me.paso = New System.Windows.Forms.RadioButton()
         Me.TB_m1 = New System.Windows.Forms.TextBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.L_procesar = New System.Windows.Forms.Label()
+        Me.label_B1 = New System.Windows.Forms.Label()
+        Me.label_B2 = New System.Windows.Forms.Label()
+        Me.label_K1 = New System.Windows.Forms.Label()
+        Me.label_B3 = New System.Windows.Forms.Label()
+        Me.label_K2 = New System.Windows.Forms.Label()
+        Me.label_K3 = New System.Windows.Forms.Label()
+        Me.label_B4 = New System.Windows.Forms.Label()
+        Me.B_restart = New System.Windows.Forms.Button()
         CType(Me.PB_limIZ, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PB_limDE, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PB_m1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -270,7 +279,8 @@ Partial Class Form1
         '
         'B_start
         '
-        Me.B_start.Location = New System.Drawing.Point(450, 110)
+        Me.B_start.Cursor = System.Windows.Forms.Cursors.AppStarting
+        Me.B_start.Location = New System.Drawing.Point(651, 12)
         Me.B_start.Name = "B_start"
         Me.B_start.Size = New System.Drawing.Size(120, 35)
         Me.B_start.TabIndex = 18
@@ -281,9 +291,9 @@ Partial Class Form1
         '
         Me.PB_limIZ.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PB_limIZ.Image = CType(resources.GetObject("PB_limIZ.Image"), System.Drawing.Image)
-        Me.PB_limIZ.Location = New System.Drawing.Point(26, 159)
+        Me.PB_limIZ.Location = New System.Drawing.Point(25, 159)
         Me.PB_limIZ.Name = "PB_limIZ"
-        Me.PB_limIZ.Size = New System.Drawing.Size(25, 237)
+        Me.PB_limIZ.Size = New System.Drawing.Size(26, 243)
         Me.PB_limIZ.TabIndex = 19
         Me.PB_limIZ.TabStop = False
         '
@@ -455,7 +465,7 @@ Partial Class Form1
         Me.tipoRespuesta.Controls.Add(Me.impulso)
         Me.tipoRespuesta.Controls.Add(Me.paso)
         Me.tipoRespuesta.Font = New System.Drawing.Font("Maiandra GD", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tipoRespuesta.Location = New System.Drawing.Point(751, 13)
+        Me.tipoRespuesta.Location = New System.Drawing.Point(470, 13)
         Me.tipoRespuesta.Name = "tipoRespuesta"
         Me.tipoRespuesta.Size = New System.Drawing.Size(150, 95)
         Me.tipoRespuesta.TabIndex = 29
@@ -496,19 +506,128 @@ Partial Class Form1
         '
         'PictureBox2
         '
+        Me.PictureBox2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(26, 159)
+        Me.PictureBox2.Location = New System.Drawing.Point(25, 159)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(904, 242)
         Me.PictureBox2.TabIndex = 31
         Me.PictureBox2.TabStop = False
+        '
+        'L_procesar
+        '
+        Me.L_procesar.AutoSize = True
+        Me.L_procesar.Cursor = System.Windows.Forms.Cursors.Default
+        Me.L_procesar.Font = New System.Drawing.Font("Maiandra GD", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.L_procesar.Location = New System.Drawing.Point(647, 66)
+        Me.L_procesar.Name = "L_procesar"
+        Me.L_procesar.Size = New System.Drawing.Size(173, 19)
+        Me.L_procesar.TabIndex = 32
+        Me.L_procesar.Text = "Esperando a procesar..."
+        '
+        'label_B1
+        '
+        Me.label_B1.AutoSize = True
+        Me.label_B1.Font = New System.Drawing.Font("Maiandra GD", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.label_B1.Location = New System.Drawing.Point(128, 251)
+        Me.label_B1.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.label_B1.Name = "label_B1"
+        Me.label_B1.Size = New System.Drawing.Size(24, 19)
+        Me.label_B1.TabIndex = 33
+        Me.label_B1.Text = "b1"
+        '
+        'label_B2
+        '
+        Me.label_B2.AutoSize = True
+        Me.label_B2.Font = New System.Drawing.Font("Maiandra GD", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.label_B2.Location = New System.Drawing.Point(128, 298)
+        Me.label_B2.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.label_B2.Name = "label_B2"
+        Me.label_B2.Size = New System.Drawing.Size(27, 19)
+        Me.label_B2.TabIndex = 34
+        Me.label_B2.Text = "b2"
+        '
+        'label_K1
+        '
+        Me.label_K1.AutoSize = True
+        Me.label_K1.Font = New System.Drawing.Font("Maiandra GD", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.label_K1.Location = New System.Drawing.Point(438, 239)
+        Me.label_K1.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.label_K1.Name = "label_K1"
+        Me.label_K1.Size = New System.Drawing.Size(23, 19)
+        Me.label_K1.TabIndex = 35
+        Me.label_K1.Text = "k1"
+        '
+        'label_B3
+        '
+        Me.label_B3.AutoSize = True
+        Me.label_B3.Font = New System.Drawing.Font("Maiandra GD", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.label_B3.Location = New System.Drawing.Point(438, 275)
+        Me.label_B3.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.label_B3.Name = "label_B3"
+        Me.label_B3.Size = New System.Drawing.Size(27, 19)
+        Me.label_B3.TabIndex = 36
+        Me.label_B3.Text = "b3"
+        '
+        'label_K2
+        '
+        Me.label_K2.AutoSize = True
+        Me.label_K2.Font = New System.Drawing.Font("Maiandra GD", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.label_K2.Location = New System.Drawing.Point(438, 312)
+        Me.label_K2.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.label_K2.Name = "label_K2"
+        Me.label_K2.Size = New System.Drawing.Size(26, 19)
+        Me.label_K2.TabIndex = 37
+        Me.label_K2.Text = "k2"
+        '
+        'label_K3
+        '
+        Me.label_K3.AutoSize = True
+        Me.label_K3.Font = New System.Drawing.Font("Maiandra GD", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.label_K3.Location = New System.Drawing.Point(762, 251)
+        Me.label_K3.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.label_K3.Name = "label_K3"
+        Me.label_K3.Size = New System.Drawing.Size(26, 19)
+        Me.label_K3.TabIndex = 38
+        Me.label_K3.Text = "k3"
+        '
+        'label_B4
+        '
+        Me.label_B4.AutoSize = True
+        Me.label_B4.Font = New System.Drawing.Font("Maiandra GD", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.label_B4.Location = New System.Drawing.Point(762, 298)
+        Me.label_B4.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.label_B4.Name = "label_B4"
+        Me.label_B4.Size = New System.Drawing.Size(27, 19)
+        Me.label_B4.TabIndex = 39
+        Me.label_B4.Text = "b4"
+        '
+        'B_restart
+        '
+        Me.B_restart.Cursor = System.Windows.Forms.Cursors.No
+        Me.B_restart.Location = New System.Drawing.Point(809, 12)
+        Me.B_restart.Name = "B_restart"
+        Me.B_restart.Size = New System.Drawing.Size(120, 35)
+        Me.B_restart.TabIndex = 40
+        Me.B_restart.Text = "Reiniciar"
+        Me.B_restart.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Linen
-        Me.ClientSize = New System.Drawing.Size(984, 552)
+        Me.ClientSize = New System.Drawing.Size(949, 411)
+        Me.Controls.Add(Me.B_restart)
+        Me.Controls.Add(Me.label_B4)
+        Me.Controls.Add(Me.label_K3)
+        Me.Controls.Add(Me.label_K2)
+        Me.Controls.Add(Me.label_B3)
+        Me.Controls.Add(Me.label_K1)
+        Me.Controls.Add(Me.label_B2)
+        Me.Controls.Add(Me.label_B1)
+        Me.Controls.Add(Me.L_procesar)
         Me.Controls.Add(Me.TB_b4)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.TB_b3)
@@ -547,12 +666,11 @@ Partial Class Form1
         Me.Controls.Add(Me.PB_b3)
         Me.Controls.Add(Me.PictureBox6)
         Me.Controls.Add(Me.PictureBox2)
+        Me.Cursor = System.Windows.Forms.Cursors.Default
         Me.Font = New System.Drawing.Font("Maiandra GD", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(5)
-        Me.MaximumSize = New System.Drawing.Size(1000, 591)
-        Me.MinimumSize = New System.Drawing.Size(1000, 591)
         Me.Name = "Form1"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Simulacion"
         CType(Me.PB_limIZ, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PB_limDE, System.ComponentModel.ISupportInitialize).EndInit()
@@ -616,4 +734,13 @@ Partial Class Form1
     Friend WithEvents paso As RadioButton
     Friend WithEvents TB_m1 As TextBox
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents L_procesar As Label
+    Friend WithEvents label_B1 As Label
+    Friend WithEvents label_B2 As Label
+    Friend WithEvents label_K1 As Label
+    Friend WithEvents label_B3 As Label
+    Friend WithEvents label_K2 As Label
+    Friend WithEvents label_K3 As Label
+    Friend WithEvents label_B4 As Label
+    Friend WithEvents B_restart As Button
 End Class
