@@ -167,14 +167,14 @@ Public Class Form1
         can_elementos = TB_Cantidad.Text
         ganancia = TB_Ganancia.Text
 
-        L_procesar.Text = "Procesando datos..."
+        L_procesar.Text += vbCrLf & "C:\User> Procesando datos..."
 
         sendOctave("clc")
         sendOctave("clear")
         sendOctave("pkg load control")
         sendOctave("s=tf{(}'s'{)};")
 
-        L_procesar.Text = "Procesando 14%..."
+        L_procesar.Text += vbCrLf & "C:\User> Procesando 14%..."
 
         sendOctave("k1=" & k1 & ";")
         sendOctave("k2=" & k2 & ";")
@@ -185,7 +185,7 @@ Public Class Form1
         sendOctave("b3=" & b3 & ";")
         sendOctave("b4=" & b4 & ";")
 
-        L_procesar.Text = "Procesando 37%..."
+        L_procesar.Text = "C:\User> Procesando 37%..."
 
         sendOctave("m1=" & m1 & ";")
         sendOctave("m2=" & m2 & ";")
@@ -197,7 +197,7 @@ Public Class Form1
         sendOctave("G1=a3/{(}a1*a3-a2*a2{)};")
         sendOctave("G2=a2/{(}a1*a3-a2*a2{)};")
 
-        L_procesar.Text = "Procesando 60%..."
+        L_procesar.Text += vbCrLf & "C:\User> Procesando 60%..."
 
         If paso.Checked = True Then
             sendOctave("[x2,t2]=step{(}G1{)};")
@@ -207,7 +207,7 @@ Public Class Form1
             sendOctave("[x1,t1]=impulse{(}G2{)};")
         End If
 
-        L_procesar.Text = "Procesando 66%..."
+        L_procesar.Text += vbCrLf & "C:\User> Procesando 66%..."
 
         sendOctave("c=length{(}t2{)};")
         sendOctave("tiempo=t2{(}c{)}*1.1;")
@@ -219,7 +219,7 @@ Public Class Form1
         sendOctave("dlmwrite{(}'" + pathFile + "\t2.txt',t2,'\n'{)};")
         sendOctave("dlmwrite{(}'" + pathFile + "\x2.txt',x2,'\n'{)};")
 
-        L_procesar.Text = "Procesando 83%..."
+        L_procesar.Text = "C:\User> Procesando 83%..."
 
         sendOctave("c=length{(}t1{)};")
         sendOctave("tiempo=t1{(}c{)}*1.1;")
@@ -233,16 +233,17 @@ Public Class Form1
         sendOctave("dlmwrite{(}'" + pathFile + "\t1.txt',t1,'\n'{)};")
         sendOctave("dlmwrite{(}'" + pathFile + "\x1.txt',x1,'\n'{)};")
 
-        L_procesar.Text = "Procesando 99%..."
+        L_procesar.Text += vbCrLf & "C:\User> Procesando 99%..."
 
         sendOctave("exit")
 
-        L_procesar.Text = "Procesado 100%"
+        L_procesar.Text += vbCrLf & "C:\User> Procesado 100%"
 
         loadData()
         Timer1.Enabled = True
 
     End Sub
+
     Sub initOctave()
         pInfo.FileName = path
         pInfo.WindowStyle = ProcessWindowStyle.Minimized
@@ -335,7 +336,9 @@ Public Class Form1
         aux += 1
         If aux = (can_elementos - 1) Then
             Timer1.Enabled = False
-            L_procesar.Text = "Graficas y Simulacion terminadas"
+            L_procesar.Text = "C:\User> Procesado 100%"
+            L_procesar.Text += vbCrLf & "C:\User> Graficas y Simulacion terminadas"
+            L_procesar.Text += vbCrLf & "C:\User> 'Pulsa REINICIAR'"
             Form2.Chart_G1.Series(0).Points.Item(pointG1).Label = "T=" + Str(Math.Round(t2(aux), 1)) + "--X=" + Str(Math.Round(x2(aux), 1))
             Form2.Chart_G2.Series(0).Points.Item(pointG2).Label = "T=" + Str(Math.Round(t1(aux), 1)) + "--X=" + Str(Math.Round(x1(aux), 1))
             Form2.Show()
@@ -349,6 +352,7 @@ Public Class Form1
 
     Private Sub B_restart_Click(sender As Object, e As EventArgs) Handles B_restart.Click
         Cursor = System.Windows.Forms.Cursors.Default
+        L_procesar.Text = "C:\User> Esperando a procesar..."
         B_restart.Enabled = False
         paso.Enabled = True
         impulso.Enabled = True
@@ -363,7 +367,7 @@ Public Class Form1
         TB_b4.Text = 1
         TB_m1.Text = 10
         TB_m2.Text = 10
-        TB_Cantidad.Text = 100
+        TB_Cantidad.Text = 300
         TB_Ganancia.Text = 1000
         label_B1.Visible = True
         label_B2.Visible = True

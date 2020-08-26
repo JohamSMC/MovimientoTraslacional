@@ -415,7 +415,7 @@ Partial Class Form1
         Me.TB_Cantidad.Name = "TB_Cantidad"
         Me.TB_Cantidad.Size = New System.Drawing.Size(85, 27)
         Me.TB_Cantidad.TabIndex = 11
-        Me.TB_Cantidad.Text = "200"
+        Me.TB_Cantidad.Text = "300"
         '
         'Label11
         '
@@ -458,7 +458,7 @@ Partial Class Form1
         '
         'Timer1
         '
-        Me.Timer1.Interval = 10
+        Me.Timer1.Interval = 1
         '
         'tipoRespuesta
         '
@@ -517,14 +517,16 @@ Partial Class Form1
         '
         'L_procesar
         '
-        Me.L_procesar.AutoSize = True
+        Me.L_procesar.BackColor = System.Drawing.Color.Black
         Me.L_procesar.Cursor = System.Windows.Forms.Cursors.Default
-        Me.L_procesar.Font = New System.Drawing.Font("Maiandra GD", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.L_procesar.Location = New System.Drawing.Point(647, 66)
+        Me.L_procesar.Font = New System.Drawing.Font("Maiandra GD", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.L_procesar.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.L_procesar.Location = New System.Drawing.Point(647, 70)
         Me.L_procesar.Name = "L_procesar"
-        Me.L_procesar.Size = New System.Drawing.Size(173, 19)
+        Me.L_procesar.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.L_procesar.Size = New System.Drawing.Size(282, 63)
         Me.L_procesar.TabIndex = 32
-        Me.L_procesar.Text = "Esperando a procesar..."
+        Me.L_procesar.Text = "C:\User> Esperando a procesar..."
         '
         'label_B1
         '
