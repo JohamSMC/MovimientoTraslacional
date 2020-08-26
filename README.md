@@ -1,4 +1,4 @@
-# Simulador de Sistema Mécanico - Movimiento Traslacional
+# Simulador de Sistema Mecánico - Movimiento Traslacional
 [![Licence](https://img.shields.io/badge/Licence-MIT%20License-brightgreen)](https://opensource.org/licenses/MIT)
 
 Simulador desarrollado por :
@@ -11,7 +11,7 @@ Simulador desarrollado por :
 
 # Descargar Ejecutable
 
-Para descargar archivo ejecutable de la aplicación pulse [aquí]()
+Para descargar archivo ejecutable de la aplicación pulse [aquí](https://github.com/JohamSMC/MovimientoTraslacional/releases/download/v1/MovimientoTraslacional.exe)
 
 # Demo
 
