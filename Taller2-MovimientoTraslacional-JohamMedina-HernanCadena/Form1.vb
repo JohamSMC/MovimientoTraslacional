@@ -35,56 +35,56 @@ Public Class Form1
         End If
     End Sub
     Private Sub TB_b1_TextChanged(sender As Object, e As EventArgs) Handles TB_b1.TextChanged
-        If IsNumeric(TB_b1.Text) = False Or Val(TB_b1.Text) < 0 Then
-            TB_b1.Text = 0
+        If IsNumeric(TB_b1.Text) = False Or Val(TB_b1.Text) <= 0 Then
+            TB_b1.Text = 1
         End If
     End Sub
 
     Private Sub TB_b2_TextChanged(sender As Object, e As EventArgs) Handles TB_b2.TextChanged
-        If IsNumeric(TB_b2.Text) = False Or Val(TB_b2.Text) < 0 Then
-            TB_b2.Text = 0
+        If IsNumeric(TB_b2.Text) = False Or Val(TB_b2.Text) <= 0 Then
+            TB_b2.Text = 1
         End If
     End Sub
 
     Private Sub TB_b3_TextChanged(sender As Object, e As EventArgs) Handles TB_b3.TextChanged
-        If IsNumeric(TB_b3.Text) = False Or Val(TB_b3.Text) < 0 Then
-            TB_b3.Text = 0
+        If IsNumeric(TB_b3.Text) = False Or Val(TB_b3.Text) <= 0 Then
+            TB_b3.Text = 1
         End If
     End Sub
 
     Private Sub TB_b4_TextChanged(sender As Object, e As EventArgs) Handles TB_b4.TextChanged
-        If IsNumeric(TB_b4.Text) = False Or Val(TB_b4.Text) < 0 Then
-            TB_b4.Text = 0
+        If IsNumeric(TB_b4.Text) = False Or Val(TB_b4.Text) <= 0 Then
+            TB_b4.Text = 1
         End If
     End Sub
 
     Private Sub TB_k1_TextChanged(sender As Object, e As EventArgs) Handles TB_k1.TextChanged
-        If IsNumeric(TB_k1.Text) = False Or Val(TB_k1.Text) < 0 Then
-            TB_k1.Text = 0
+        If IsNumeric(TB_k1.Text) = False Or Val(TB_k1.Text) <= 0 Then
+            TB_k1.Text = 10
         End If
     End Sub
 
     Private Sub TB_k2_TextChanged(sender As Object, e As EventArgs) Handles TB_k2.TextChanged
-        If IsNumeric(TB_k2.Text) = False Or Val(TB_k2.Text) < 0 Then
-            TB_k2.Text = 0
+        If IsNumeric(TB_k2.Text) = False Or Val(TB_k2.Text) <= 0 Then
+            TB_k2.Text = 10
         End If
     End Sub
 
     Private Sub TB_k3_TextChanged(sender As Object, e As EventArgs) Handles TB_k3.TextChanged
-        If IsNumeric(TB_k3.Text) = False Or Val(TB_k3.Text) < 0 Then
-            TB_k3.Text = 0
+        If IsNumeric(TB_k3.Text) = False Or Val(TB_k3.Text) <= 0 Then
+            TB_k3.Text = 10
         End If
     End Sub
 
     Private Sub TB_Cantidad_TextChanged(sender As Object, e As EventArgs) Handles TB_Cantidad.TextChanged
-        If IsNumeric(TB_Cantidad.Text) = False Or Val(TB_Cantidad.Text) < 0 Then
-            TB_Cantidad.Text = 0
+        If IsNumeric(TB_Cantidad.Text) = False Or Val(TB_Cantidad.Text) <= 0 Then
+            TB_Cantidad.Text = 300
         End If
     End Sub
 
     Private Sub TB_Ganancia_TextChanged(sender As Object, e As EventArgs) Handles TB_Ganancia.TextChanged
-        If IsNumeric(TB_Ganancia.Text) = False Or Val(TB_Ganancia.Text) < 0 Then
-            TB_Ganancia.Text = 0
+        If IsNumeric(TB_Ganancia.Text) = False Or Val(TB_Ganancia.Text) <= 0 Then
+            TB_Ganancia.Text = 1000
         End If
     End Sub
 
