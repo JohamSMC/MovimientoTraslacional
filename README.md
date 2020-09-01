@@ -13,6 +13,10 @@ Simulador desarrollado por :
 
 Para descargar archivo ejecutable de la aplicación pulse [aquí](https://github.com/JohamSMC/MovimientoTraslacional/releases/download/v1/MovimientoTraslacional.exe)
 
+> **NOTA IMPORTANTE! :** Para ejecutar el programa debe estar la tecla
+>  "Blo Mayús" desactivada, es decir, la escritura
+>	del teclado debe estar "modo minisculas"
+
 # Demo
 
 ## Seleccionar Ruta ***OCTAVE***
